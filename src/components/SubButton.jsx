@@ -5,7 +5,7 @@ const { Kakao } = window;
 
 export default function SubButton() {
   // 배포한 자신의 사이트
-  const realUrl = "https://wepublic-weing-test.vercel.app/";
+  const realUrl = "https://wepublic-weing-test.vercel.app";
   // 로컬 주소 (localhost 3000 같은거)
   // const resultUrl = "http://localhost:3001/";
 
@@ -23,10 +23,10 @@ export default function SubButton() {
     Kakao.Share.sendDefault({
       objectType: "feed",
       content: {
-        title: "오늘의 디저트",
-        description: "아메리카노, 빵, 케익",
-        imageUrl:
-          "https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
+        title: "나의 입맛 월드컵 😋",
+        description:
+          "나만 알고 싶은 로컬 맛.zip with Wepublic DAO - 나의 입맛 유형 알아보고 나와 어울리는 입맛 유형 추천 받자🎉",
+        imageUrl: `${process.env.PUBLIC_URL}/images/bg.png`,
         link: {
           mobileWebUrl: realUrl,
         },
@@ -36,6 +36,12 @@ export default function SubButton() {
           title: "나도 테스트 하러가기",
           link: {
             mobileWebUrl: realUrl,
+          },
+        },
+        {
+          title: "결과 보기",
+          link: {
+            mobileWebUrl: realUrl + "/results",
           },
         },
       ],
