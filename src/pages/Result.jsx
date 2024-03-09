@@ -1,5 +1,6 @@
 import React from "react";
 import SubButton from "../components/SubButton";
+import SubButton2 from "../components/SubButton2";
 
 export default function Result() {
   return (
@@ -38,8 +39,11 @@ export default function Result() {
             </div>
           </div>
         </div>
-        <div className="z-20 bg-slate-500 w-[312px] h-[68px] mt-5">
-          {/* <SubButton /> */}
+        <div className="z-2 w-[312px] h-[68px] mt-5 flex justify-center items-center">
+          <div className="mr-7">
+            <SubButton />
+          </div>
+          <SubButton2 />
         </div>
       </div>
     </div>
