@@ -1,13 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./pages/main";
-import Worldcup from "./pages/worldcup";
+import Loading from "./components/Loading";
+import Result from "./pages/Result";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/worldcup" element={<Worldcup />} />
+        <Route path="/loadings" element={<Loading />} />
+        <Route path="/results" element={<Result />} />
       </Routes>
     </BrowserRouter>
   );

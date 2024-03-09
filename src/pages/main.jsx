@@ -1,10 +1,30 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./animate.css";
 import StartButtons from "../components/StartButtons";
+import Loading from "../components/Loading";
 
 export default function Main() {
   const flavorCheck = "입맛\n첵췤";
+  const [loading, setLoading] = useState(false);
+
+  const handleStartButtonClick = () => {
+    // 버튼 클릭 시 로딩 시작
+    setLoading(true);
+  };
+
+  useEffect(() => {
+    // 로딩이 시작되면 2초 후에 로딩 종료 및 SecondPage로 이동
+    if (loading) {
+      const timeoutId = setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+
+      // 컴포넌트가 언마운트될 때 타이머를 정리하여 메모리 누수 방지
+      return () => clearTimeout(timeoutId);
+    }
+  }, [loading]);
+
   return (
     <div className="bg-purple-300 min-h-screen flex flex-col justify-center items-center">
       <div className="relative w-[360px] h-[800px] flex flex-col justify-center items-center">
@@ -21,8 +41,10 @@ export default function Main() {
           </div>
           <div className="blob"></div>
         </div>
-        <StartButtons></StartButtons>
-        <Link to="/worldcup"></Link>
+          {loading ? <Loading /> : <Link to="/worldcup" />}
+        <button onClick={handleStartButtonClick}>
+          <StartButtons />
+        </button>
       </div>
     </div>
   );

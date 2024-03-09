@@ -1,12 +1,11 @@
-import React from 'react'
+import React from "react";
 import "./startButton.css";
 
 export default function StartButtons() {
-    
   return (
     <div class="btn-conteiner">
-      <a class="btn-content" href="startbtn">
-        <span class="btn-title">NEXT</span>
+      <a class="btn-content" href="loadings">
+        <span class="btn-title">START !!</span>
         <span class="icon-arrow">
           <svg
             width="66px"
