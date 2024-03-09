@@ -26,7 +26,8 @@ export default function SubButton() {
         title: "나의 입맛 월드컵 😋",
         description:
           "나만 알고 싶은 로컬 맛.zip with Wepublic DAO - 나의 입맛 유형 알아보고 나와 어울리는 입맛 유형 추천 받자🎉",
-        imageUrl: `${process.env.PUBLIC_URL}/images/bg.png`,
+        imageUrl:
+          "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F4f80fd8a-7701-43ec-a1e3-0c988571d912%2F4a686a2a-3b0f-494f-878c-102d7b8337d7%2F%25E1%2584%2580%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25B71.jpg?table=block&id=6790c1f8-c08f-4f33-93f7-a7a2e7697d6c&spaceId=4f80fd8a-7701-43ec-a1e3-0c988571d912&width=2000&userId=4deb6213-419c-4f6d-bf5c-e42b89f05219&cache=v2",
         link: {
           mobileWebUrl: realUrl,
         },
