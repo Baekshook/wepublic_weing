@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./pages/main";
 import Loading from "./components/Loading";
-import Result from "./pages/Result";
+import ResultPage from "./pages/ResultPage";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/loadings" element={<Loading />} />
-        <Route path="/results" element={<Result />} />
+        <Route path="/results/:flavorId" element={<ResultPage />} />
       </Routes>
     </BrowserRouter>
   );
