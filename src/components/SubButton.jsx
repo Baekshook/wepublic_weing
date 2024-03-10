@@ -47,7 +47,7 @@ export default function SubButton() {
         {
           title: "결과 보기",
           link: {
-            mobileWebUrl: realUrl + "/results" + paramsNum,
+            mobileWebUrl: realUrl + "/results/" + paramsNum,
           },
         },
       ],
