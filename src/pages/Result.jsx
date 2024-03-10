@@ -40,7 +40,7 @@ export default function Result() {
             <div className="w-[312px] h-[58px] z-20 mt-5">
               <div className="flex flex-grow justify-center items-center">
                 <div className="flex flex-col">
-                  <div className="font-bold text-xl text-white mr-10">
+                  <div className="font-bold text-xl text-white mr-8">
                     환상의 입맛 짝꿍
                   </div>
                   <div className="font-bold text-md text-white">
@@ -58,7 +58,7 @@ export default function Result() {
               </div>
             </div>
             <div className="z-2 w-[312px] h-[68px] mt-5 flex justify-center items-center">
-              <div className="mr-7">
+              <div className="mr-8">
                 <SubButton />
               </div>
               <SubButton2 />
