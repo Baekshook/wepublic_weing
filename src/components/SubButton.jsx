@@ -7,6 +7,7 @@ const { Kakao } = window;
 export default function SubButton() {
   let params = useParams();
   let paramsNum = params.flavorId.toString();
+  console.log(paramsNum);
 
   // 배포한 자신의 사이트
   const realUrl = "https://wepublic-weing-test.vercel.app";
@@ -46,7 +47,7 @@ export default function SubButton() {
         {
           title: "결과 보기",
           link: {
-            mobileWebUrl: realUrl + "/results" + { paramsNum },
+            mobileWebUrl: realUrl + "/results" + paramsNum,
           },
         },
       ],
