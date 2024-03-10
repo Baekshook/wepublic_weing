@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
 import "./subButton.css";
+import { useParams } from "react-router-dom";
 
 const { Kakao } = window;
 
 export default function SubButton() {
+  let params = useParams();
+  let paramsNum = params.flavorId.toString();
+
   // 배포한 자신의 사이트
   const realUrl = "https://wepublic-weing-test.vercel.app";
   // 로컬 주소 (localhost 3000 같은거)
@@ -42,7 +46,7 @@ export default function SubButton() {
         {
           title: "결과 보기",
           link: {
-            mobileWebUrl: realUrl + "/results",
+            mobileWebUrl: realUrl + "/results" + { paramsNum },
           },
         },
       ],
